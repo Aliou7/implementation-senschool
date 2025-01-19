@@ -1,0 +1,358 @@
+@prefix snch: <https://senegalculturalheritage/ontology/> .
+@prefix snch_r: <https://senegalculturalheritage/ressource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### **Tariqas (Spiritual Orders)** ###  
+
+ snch_r:Muridism a snch:Tariqa ;
+    rdfs:label "Muridism"@en ;
+    snch:founded_by snch_r:Amadou_Bamba ;
+    snch:has_location snch_r:Senegal;
+    snch:has_location snch_r:The_Gambia ;
+    snch:city_located snch_r:Touba ;
+    snch:guided_by snch_r:Caliph ;
+    snch:celebrates_festivals snch_r:Magal ;
+    snch:practices_dhikr snch_r:Wird_Muridiyya ;
+    snch:has_hierarchy snch_r:Murid_Hierarchy ;
+    snch:belongs_to_lineage snch_r:Murid_Lineage ;
+    snch:produces_literature snch_r:Murid_Literature ;
+    snch:undertakes_pilgrimage snch_r:Grand_Pilgrimage_to_Touba ;
+    snch:teaches snch_r:Murid_Doctrine ;
+    snch:practices snch_r:Murid_Spiritual_Practices ;
+    snch:has_artifact snch_r:Murid_Artifacts .
+
+
+snch_r:Tijaniyya a snch:Tariqa ;
+    rdfs:label "Tijaniyya Tariqa"@en ;
+    snch:foundation_date "1781"^^xsd:date ;
+    snch:founded_by snch_r:Ahmad_al_Tijani ;
+    snch:has_location snch_r:Senegal ;
+    snch:has_location snch_r:North_Africa ;
+    snch:city_located snch_r:Fez ;
+    snch:practices_dhikr snch_r:Wird_Tijani ;
+    snch:has_hierarchy snch_r:Tijani_Hierarchy ;
+    snch:belongs_to_lineage snch_r:Tijani_Lineage ;
+    snch:produces_literature snch_r:Tijani_Literature ;
+    snch:undertakes_pilgrimage snch_r:Ziyara_to_Fez ;
+    snch:teaches snch_r:Tijani_Doctrine ;
+    snch:practices snch_r:Tijani_Spiritual_Practices ;
+    snch:has_artifact snch_r:Tijani_Artifacts .
+
+snch_r:Qadiriyya a snch:Tariqa ;
+    rdfs:label "Qadiriyya Tariqa"@en ;
+    snch:foundation_date "12th_century"^^xsd:string ;
+    snch:founded_by snch_r:Abd_al_Qadir_Gilani ;
+    snch:has_location snch_r:Senegal ;
+    snch:city_located snch_r:Baghdad ;
+    snch:practices_dhikr snch_r:Wird_Qadiri ;
+    snch:has_hierarchy snch_r:Qadiri_Hierarchy ;
+    snch:belongs_to_lineage snch_r:Qadiri_Lineage ;
+    snch:produces_literature snch_r:Qadiri_Literature ;
+    snch:undertakes_pilgrimage snch_r:Ziyara_to_Baghdad ;
+    snch:teaches snch_r:Qadiri_Doctrine ;
+    snch:practices snch_r:Qadiri_Spiritual_Practices ;
+    snch:has_artifact snch_r:Qadiri_Artifacts .
+
+snch_r:Naqshbandi a snch:Tariqa ;
+    rdfs:label "Naqshbandi Tariqa"@en ;
+    snch:foundation_date "14th_century"^^xsd:string ;
+    snch:founded_by snch_r:Baha_ud_Din_Naqshband_Bukhari ;
+    snch:city_located snch_r:Bukhara ;
+    snch:practices_dhikr snch_r:Wird_Naqshbandi ;
+    snch:has_hierarchy snch_r:Naqshbandi_Hierarchy ;
+    snch:belongs_to_lineage snch_r:Naqshbandi_Lineage ;
+    snch:produces_literature snch_r:Naqshbandi_Literature ;
+    snch:undertakes_pilgrimage snch_r:Ziyara_to_Bukhara ;
+    snch:teaches snch_r:Naqshbandi_Doctrine ;
+    snch:practices snch_r:Naqshbandi_Spiritual_Practices ;
+    snch:has_artifact snch_r:Naqshbandi_Artifacts .
+
+### **Spiritual Practices and Doctrines** ###
+snch_r:Murid_Spiritual_Practices a snch:Spiritual_Practices ;
+    rdfs:label "Murid Spiritual Practices"@en ;
+    snch:includes snch_r:Khidma ;
+    snch:practices_dhikr snch_r:Wird_Muridiyya .
+
+snch_r:Tijani_Spiritual_Practices a snch:Spiritual_Practices ;
+    rdfs:label "Tijani Spiritual Practices"@en ;
+    snch:practices_dhikr snch_r:Wird_Tijani .
+
+snch_r:Qadiri_Spiritual_Practices a snch:Spiritual_Practices ;
+    rdfs:label "Qadiri Spiritual Practices"@en ;
+    snch:practices_dhikr snch_r:Wird_Qadiri .
+
+snch_r:Naqshbandi_Spiritual_Practices a snch:Spiritual_Practices ;
+    rdfs:label "Naqshbandi Spiritual Practices"@en ;
+    snch:practices_dhikr snch_r:Wird_Naqshbandi .
+
+### **Doctrines** ###
+snch_r:Murid_Doctrine a snch:Doctrine ;
+    rdfs:label "Murid Doctrine"@en ;
+    rdfs:comment "Doctrine emphasizing love, humility, and service." .
+
+snch_r:Tijani_Doctrine a snch:Doctrine ;
+    rdfs:label "Tijani Doctrine"@en ;
+    rdfs:comment "Doctrine emphasizing remembrance of God and spiritual transmission." .
+
+snch_r:Qadiri_Doctrine a snch:Doctrine ;
+    rdfs:label "Qadiri Doctrine"@en ;
+    rdfs:comment "Doctrine focusing on piety, prayer, and charity." .
+
+snch_r:Naqshbandi_Doctrine a snch:Doctrine ;
+    rdfs:label "Naqshbandi Doctrine"@en ;
+    rdfs:comment "Doctrine emphasizing silent dhikr and inner purification." .
+
+### **Artifacts** ###
+snch_r:Murid_Artifacts a snch:Artifact ;
+    rdfs:label "Murid Artifacts"@en ;
+    snch:includes snch_r:Sandals_of_Amadou_Bamba .
+
+snch_r:Tijani_Artifacts a snch:Artifact ;
+    rdfs:label "Tijani Artifacts"@en ;
+    snch:includes snch_r:Tijani_Prayer_Beads .
+
+snch_r:Qadiri_Artifacts a snch:Artifact ;
+    rdfs:label "Qadiri Artifacts"@en ;
+    snch:includes snch_r:Qadiri_Mantle .
+
+snch_r:Naqshbandi_Artifacts a snch:Artifact ;
+    rdfs:label "Naqshbandi Artifacts"@en ;
+    snch:includes snch_r:Naqshbandi_Calligraphy .
+
+### **Cities and Places** ###
+snch_r:Touba a snch:City ;
+    rdfs:label "Touba"@en ;
+    snch:located_in snch_r:Senegal .
+
+snch_r:Fez a snch:City ;
+    rdfs:label "Fez"@en ;
+    snch:located_in snch_r:Morocco .
+
+snch_r:Baghdad a snch:City ;
+    rdfs:label "Baghdad"@en ;
+    snch:located_in snch_r:Iraq .
+
+snch_r:Bukhara a snch:City ;
+    rdfs:label "Bukhara"@en ;
+    snch:located_in snch_r:Uzbekistan .
+
+### **Caliphs of Mouridism ** ###
+snch_r:Serigne_Mouhamadou_Moustapha_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Mouhamadou Moustapha Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1878"^^xsd:date ;
+    snch:took_office_from "1927"^^xsd:date ;
+    snch:took_office_until "1945"^^xsd:date .
+
+snch_r:Serigne_Mouhamadou_Fallilou_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Mouhamadou Fallilou Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1888"^^xsd:date ;
+    snch:took_office_from "1945"^^xsd:date ;
+    snch:took_office_until "1968"^^xsd:date .
+
+snch_r:Serigne_Abdou_Ahad_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Abdou Ahad Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1914"^^xsd:date ;
+    snch:took_office_from "1989"^^xsd:date ;
+    snch:took_office_until "1990"^^xsd:date .
+
+
+snch_r:Serigne_Abdou_Khadr_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Abdou Khadr Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1914"^^xsd:date ;
+    snch:took_office_from "1989"^^xsd:date ;
+    snch:took_office_until "1990"^^xsd:date .
+
+
+snch_r:Serigne_Saliou_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Saliou Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1915"^^xsd:date ;
+    snch:took_office_from "1990"^^xsd:date ;
+    snch:took_office_until "2007-12-28"^^xsd:date .
+
+snch_r:Serigne_Mouhamadou_Lamine_Bara_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Mouhamadou Lamine Bara Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1921"^^xsd:date ;
+    snch:took_office_from "2007-12-28"^^xsd:date ;
+    snch:took_office_until "2010"^^xsd:date .
+
+snch_r:Serigne_Sidi_Moukhtar_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Sidi Moukhtar Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1924"^^xsd:date ;
+    snch:took_office_from "2010-07-01"^^xsd:date ;
+    snch:took_office_until "2018-01-09"^^xsd:date .
+
+snch_r:Serigne_Mountakha_Mbacke a snch:Caliph ;
+    rdfs:label "Serigne Mountakha Mbacké"@en ;
+    snch:has_affiliation snch_r:Muridism ;
+    snch:date_of_birth "1932"^^xsd:date ;
+    snch:took_office_from "2018-01-10"^^xsd:date ;
+    rdfs:comment "The current Caliph General of the Murid Tariqa and organizer of the Magal."@en .
+    
+    ### **Mothers** ###
+snch_r:Sokhna_Faty_Diakhate a snch:Mother ;
+    rdfs:label "Sokhna Faty Diakhate"@en ;
+    rdfs:comment "The mother of Serigne Saliou Mbacké."@en .
+    
+snch_r:Sokhna_Aminat_Lo a snch:Mother ;
+    rdfs:label "Sokhna Aminata Lo"@en ;
+    rdfs:comment "The mother of Serigne Mouhamadou Moustapha Mbacké."@en .
+    
+snch_r:Sokhna_Awa_Bousso a snch:Mother ;
+    rdfs:label "Sokhna Awa Bousso"@en ;
+    rdfs:comment "The mother of Serigne Mouhamadou Fallilou Mbacké."@en .
+
+snch_r:Sokhna_Mariama_Diakhate a snch:Mother ;
+    rdfs:label "Sokhna Mariama Diakhate"@en ;
+    rdfs:comment "The mother of Serigne Abdou Ahad Mbacké."@en .
+    
+snch_r:Sokhna_Aminata_Bousso a snch:Mother ;
+    rdfs:label "Sokhna Aminata Bousso"@en ;
+    rdfs:comment "The mother of Serigne Abdou Khadr Mbacké."@en .
+ 
+snch_r:Sokhna_Khary_Sall a snch:Mother ;
+    rdfs:label "Sokhna Faty Diakhate"@en ;
+    rdfs:comment "The mother of Serigne Mouhamadou Lamine Bara Mbacké."@en . 
+    
+   
+snch_r:Sokhna_Maty_Lèye a snch:Mother ;
+    rdfs:label "Sokhna Maty Lèye"@en ;
+    rdfs:comment "The mother of Serigne Sidi Mouhktar Mbacké."@en .
+    
+snch_r:Sokhna_Binta_Diakhate a snch:Mother ;
+    rdfs:label "Sokhna Binta Diakhate"@en ;
+    rdfs:comment "The mother of Serigne Mountakha Mbacké."@en . 
+    
+      ### **Fathers** ###
+snch_r:Amadou_Bamba a snch:father ;
+    rdfs:label "Amadou Bamba"@en ;
+    rdfs:comment "The father of Serigne Mouhamadou Moustapha Mbacké."@en .
+    
+snch_r:Amadou_Bamba a snch:Father ;
+    rdfs:label "Amadou Bamba"@en ;
+    rdfs:comment "The father of Serigne Mouhamadou Fallilou Mbacké."@en .
+    
+snch_r:Amadou_Bamba a snch:Father ;
+    rdfs:label "Amadou Bamba"@en ;
+    rdfs:comment "The father of Serigne Abdou Ahad Mbacké."@en .
+    
+snch_r:Amadou_Bamba a snch:Father ;
+    rdfs:label "Amadou Bamba"@en ;
+    rdfs:comment "The father of Serigne Abdou Khadr Mbacké."@en .
+    
+snch_r:Amadou_Bamba a snch:Father ;
+    rdfs:label "Amadou Bamba"@en ;
+    rdfs:comment "The father of Serigne Saliou Mbacké."@en .
+    
+snch_r:Mouhamadou_Fallilou_Mbacke a snch:Father ;
+    rdfs:label "Serigne Mouhamadou Fallilou Mbacke"@en ;
+    rdfs:comment "The father of Serigne Mouhamadou Lamine Bara Mbacké."@en .
+    
+snch_r:Mouhamdou_Lamine_Bara_Macke a snch:Father ;
+    rdfs:label "Mouhamdou Lamine Bara Macke"@en ;
+    rdfs:comment "The father of Serigne Sidi Mouhktar Mbacké."@en .
+    
+snch_r:Mouhamdou_Bassirou_Mbacke a snch:Father ;
+    rdfs:label "Mouhamdou Bassirou Mbacke"@en ;
+    rdfs:comment "The father of Serigne Mountakha Mbacké."@en .
+    
+### **Birthplaces** ###
+snch_r:Diourbel a snch:BirthPlace ;
+    rdfs:label "Diourbel"@en ;
+    rdfs:comment "The birthplace of Serigne Saliou Mbacké."@en .
+    
+snch_r:Daaru_Salam a snch:BirthPlace ;
+    rdfs:label "Daaru Salam"@en ;
+    rdfs:comment "The birthplace of Serigne Mouhamadou Moustapha Mbacké."@en .
+    
+snch_r:Diourbel a snch:BirthPlace ;
+    rdfs:label "Diourbel"@en ;
+    rdfs:comment "The birthplace of Serigne Abdou Ahad Mbacké."@en .
+
+snch_r:Daaru_Alimul_Kabir_in_Ndame a snch:BirthPlace ;
+    rdfs:label "Daaru Alimul Kabir in Ndame"@en ;
+    rdfs:comment "The birthplace of Serigne Abdou Khadr Mbacké."@en .
+
+snch_r:Daaru_Salam a snch:BirthPlace ;
+    rdfs:label "Darru Salam"@en ;
+    rdfs:comment "The birthplace of Serigne Mouhamadou Fallilou Mback."@en .
+    
+snch_r:Touba a snch:BirthPlace ;
+    rdfs:label "Touba"@en ;
+    rdfs:comment "The birthplace of Serigne Mouhamadou Lamine Bara Mbacké."@en .
+
+snch_r:Mbacké a snch:BirthPlace ;
+    rdfs:label "Mbacké Kadior"@en ;
+    rdfs:comment "The birthplace of Serigne Sidi Mohktar Mbacké."@en .
+
+snch_r:Daaru_Miname a snch:BirthPlace ;
+    rdfs:label "Daaru Miname"@en ;
+    rdfs:comment "The birthplace of Serigne Mountakh Mbacké."@en .
+    
+    
+    ### **Caliphs of Tidianiya** ###
+    snch_r:Serigne_Babacar_Sy a snch:Caliph ;
+    rdfs:label "Serigne Babacar Sy" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:El_Hadj_Malick_Sy ;
+    snch:date_of_birth "1885-01-01"^^xsd:date ;
+    snch:took_office_from "1922-01-01"^^xsd:date ;
+    snch:took_office_until "1957-01-01"^^xsd:date .
+
+snch_r:Serigne_Mansour_Sy a snch:Caliph ;
+    rdfs:label "Serigne Mansour Sy" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:El_Hadj_Malick_Sy ;
+    snch:date_of_birth "1900-01-01"^^xsd:date ;
+    snch:took_office_from "1957-03-01"^^xsd:date ;
+    snch:took_office_until "1957-03-05"^^xsd:date .
+
+snch_r:Serigne_Abdoul_Aziz_Sy_Dabakh a snch:Caliph ;
+    rdfs:label "Serigne Abdoul Aziz Sy 'Dabakh'" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:El_Hadj_Malick_Sy ;
+    snch:date_of_birth "1904-01-01"^^xsd:date ;
+    snch:took_office_from "1957-01-01"^^xsd:date ;
+    snch:took_office_until "1997-01-01"^^xsd:date .
+
+snch_r:Serigne_Mansour_Sy_Borom_Daraji a snch:Caliph ;
+    rdfs:label "Serigne Mansour Sy 'Borom Daraji'" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:El_Hadj_Malick_Sy ;
+    snch:date_of_birth "1925-01-01"^^xsd:date ;
+    snch:took_office_from "1997-01-01"^^xsd:date ;
+    snch:took_office_until "2012-01-01"^^xsd:date .
+
+snch_r:Serigne_Cheikh_Tidiane_Sy_Al_Maktoum a snch:Caliph ;
+    rdfs:label "Serigne Cheikh Tidiane Sy 'Al Maktoum'" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:El_Hadj_Malick_Sy ;
+    snch:date_of_birth "1925-01-01"^^xsd:date ;
+    snch:took_office_from "2012-01-01"^^xsd:date ;
+    snch:took_office_until "2017-03-01"^^xsd:date .
+
+snch_r:Serigne_Abdoul_Aziz_Sy_Al_Amine a snch:Caliph ;
+    rdfs:label "Serigne Abdoul Aziz Sy 'Al Amine'" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:El_Hadj_Malick_Sy ;
+    snch:date_of_birth "1928-01-01"^^xsd:date ;
+    snch:took_office_from "2017-03-01"^^xsd:date ;
+    snch:took_office_until "2017-09-01"^^xsd:date .
+
+snch_r:Serigne_Mbaye_Sy_Mansour a snch:Caliph ;
+    rdfs:label "Serigne Mbaye Sy Mansour" ;
+    snch:has_affiliation snch_r:Tidianism ;
+    snch:has_father snch_r:Serigne_Mansour_Sy ;
+    snch:date_of_birth "1932-01-01"^^xsd:date ;
+    snch:took_office_from "2017-09-01"^^xsd:date .
+
+

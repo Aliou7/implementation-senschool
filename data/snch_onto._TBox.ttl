@@ -1,0 +1,378 @@
+@prefix snch: <https://senegalculturalheritage/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+snch:Tariqa rdf:type rdfs:Class ;
+    rdfs:label "Tariqa"@en ;
+    rdfs:comment "A Sufi order or spiritual path, typically established by a saintly figure or a charismatic spiritual leader. Tariqas serve as spiritual and social organizations within Islam, providing a structured framework for seekers to progress along the path of spiritual purification and closeness to God."@en .
+
+snch:Person rdf:type rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "Represents individuals involved in events, affiliations, and roles within the Tariqa context."@en .
+    
+snch:Father rdf:type rdfs:Class ;
+    rdfs:label "Father"@en ;
+    rdfs:comment "Represents the father of an individual."@en ;
+    rdfs:subClassOf snch:Person .
+
+    
+snch:Mother rdf:type rdfs:Class ;
+    rdfs:label "Mother"@en ;
+    rdfs:comment "Represents the mother of an individual."@en ;
+    rdfs:subClassOf snch:Person .
+
+
+snch:Founder rdf:type rdfs:Class ;
+    rdfs:label "Founder"@en ;
+    rdfs:comment "The saintly figure or spiritual leader who founded the Tariqa. The founder plays a central role in shaping the teachings, practices, and ethos of the Tariqa."@en ;
+    rdfs:subClassOf snch:Actor .
+    
+snch:BirthPlace rdf:type rdfs:Class ;
+    rdfs:label "Birth Place"@en ;
+    rdfs:comment "Represents the place where an individual was born."@en .
+
+
+snch:Spiritual_Practices rdf:type rdfs:Class ;
+    rdfs:label "Spiritual Practices"@en ;
+    rdfs:comment "The specific rituals, prayers, and disciplines prescribed by the Tariqa to its followers for spiritual growth and development. Spiritual practices form an integral part of the Tariqa's teachings, guiding followers on their journey towards spiritual enlightenment."@en .
+
+snch:Initiator rdf:type rdfs:Class ;
+    rdfs:label "Initiator"@en ;
+    rdfs:comment "The process or individual responsible for initiating followers into a Tariqa. Initiation marks the formal entry of individuals into the spiritual community of the Tariqa, symbolizing their commitment to its teachings and practices."@en ;
+    rdfs:subClassOf snch:Actor .
+
+snch:Hierarchy rdf:type rdfs:Class ;
+    rdfs:label "Hierarchy"@en ;
+    rdfs:comment "The organizational structure of the Tariqa, including ranks or levels of authority among its members. Hierarchy establishes the framework for leadership, guidance, and administration within the Tariqa, ensuring the effective transmission of spiritual knowledge and guidance."@en .
+
+snch:Caliph rdf:type rdfs:Class ;
+    rdfs:label "Caliph"@en ;
+    rdfs:comment "The spiritual leader and successor of the founder within the Tariqa, responsible for providing guidance, leadership, and instruction to the followers. The Caliph plays a pivotal role in upholding the traditions and teachings of the Tariqa, ensuring its continuity and spiritual growth."@en ;
+    rdfs:subClassOf snch:Actor .
+
+snch:Doctrine rdf:type rdfs:Class ;
+    rdfs:label "Doctrine"@en ;
+    rdfs:comment "The core beliefs, principles, and teachings of the Tariqa, which often emphasize concepts such as love, humility, and the remembrance of God. Doctrine serves as the foundation of the Tariqa's spiritual teachings, providing a framework for understanding the nature of existence, the purpose of life, and the path to spiritual realization."@en .
+
+snch:Community rdf:type rdfs:Class ;
+    rdfs:label "Community"@en ;
+    rdfs:comment "The collective body of followers within the Tariqa, bound together by a shared commitment to spiritual growth and adherence to the teachings of the founder. Community fosters a sense of belonging, solidarity, and mutual support among followers, creating a supportive environment for spiritual practice and growth."@en .
+
+snch:Lineage rdf:type rdfs:Class ;
+    rdfs:label "Lineage"@en ;
+    rdfs:comment "The spiritual lineage or chain of transmission tracing back to the founder of the Tariqa, often considered essential for authenticity and spiritual authority. Lineage connects followers to the spiritual heritage of the Tariqa, preserving the teachings and practices passed down through generations and ensuring continuity in spiritual guidance and practice."@en .
+
+snch:Dhikr rdf:type rdfs:Class ;
+    rdfs:label "Dhikr"@en ;
+    rdfs:comment "The practice of invoking and remembering God through chanting, recitation, or meditation, which is central to many Tariqas, including Muridism. Dhikr serves as a means of spiritual purification, mindfulness, and connection with the divine, deepening the practitioner's awareness of God's presence and fostering inner peace and tranquility."@en .
+
+snch:Sufi_Literature rdf:type rdfs:Class ;
+    rdfs:label "Sufi Literature"@en ;
+    rdfs:comment "The writings, poetry, and teachings produced by the leaders and followers of the Tariqa, serving as sources of inspiration and guidance for practitioners. Sufi literature embodies the wisdom, insights, and spiritual experiences of the Tariqa's followers and leaders, offering guidance, inspiration, and deeper understanding of spiritual truths."@en .
+
+snch:Pilgrimage rdf:type rdfs:Class ;
+    rdfs:label "Pilgrimage"@en ;
+    rdfs:comment "The journey to sacred sites associated with the Tariqa, which may include the tombs of saints or other spiritually significant locations. Pilgrimage holds symbolic and spiritual significance within the Tariqa, providing opportunities for spiritual growth, reflection, and connection with divine grace."@en .
+
+snch:Community_Service rdf:type rdfs:Class ;
+    rdfs:label "Community Service"@en ;
+    rdfs:comment "The emphasis on serving humanity and promoting social welfare as part of the spiritual practice within the Tariqa. Community service reflects the Tariqa's commitment to compassion, justice, and altruism, manifesting the teachings of love and service in practical acts of kindness and support for those in need."@en .
+
+snch:Interfaith_Relations rdf:type rdfs:Class ;
+    rdfs:label "Interfaith Relations"@en ;
+    rdfs:comment "The Tariqa's approach to engaging with other religious traditions and fostering dialogue and cooperation. Interfaith relations promote understanding, tolerance, and mutual respect between different faith communities, reflecting the Tariqa's commitment to universal values of peace, harmony, and unity."@en .
+
+snch:Contemporary_Relevance rdf:type rdfs:Class ;
+    rdfs:label "Contemporary Relevance"@en ;
+    rdfs:comment "The relevance and adaptation of the Tariqa's teachings and practices to contemporary issues and challenges. Contemporary relevance reflects the Tariqa's ability to address the evolving needs and concerns of society, offering spiritual guidance, wisdom, and solutions to contemporary problems and dilemmas."@en .
+
+snch:Artifact rdf:type rdfs:Class ;
+    rdfs:label "Artifact"@en ;
+    rdfs:comment "Represents tangible objects or items of cultural, religious, or historical significance associated with the Tariqa."@en ;
+    rdfs:subClassOf snch:Man_Made_Thing .
+
+snch:SacredObject rdf:type rdfs:Class ;
+    rdfs:label "Sacred Object"@en ;
+    rdfs:comment "Represents objects of religious or spiritual significance within the Tariqa, often used in rituals or revered by followers."@en ;
+    rdfs:subClassOf snch:Artifact .
+
+snch:CeremonialItem rdf:type rdfs:Class ;
+    rdfs:label "Ceremonial Item"@en ;
+    rdfs:comment "Represents items used in Tariqa ceremonies or rituals, including instruments, clothing, or symbolic objects."@en ;
+    rdfs:subClassOf snch:Artifact .
+
+snch:HistoricalArtifact rdf:type rdfs:Class ;
+    rdfs:label "Historical Artifact"@en ;
+    rdfs:comment "Represents artifacts with historical significance related to the Tariqa, such as documents, manuscripts, or relics associated with key figures or events."@en ;
+    rdfs:subClassOf snch:Artifact .
+
+snch:Artwork rdf:type rdfs:Class ;
+    rdfs:label "Artwork"@en ;
+    rdfs:comment "Represents artistic creations or expressions associated with the Tariqa, including calligraphy, paintings, or sculptures inspired by Tariqa teachings or symbols."@en ;
+    rdfs:subClassOf snch:Artifact .
+
+snch:Building rdf:type rdfs:Class ;
+    rdfs:label "Building"@en ;
+    rdfs:comment "Represents physical structures or buildings of cultural or historical significance associated with the Tariqa, such as mosques, zawiyas, or shrines."@en .
+
+snch:City rdf:type rdfs:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "Represents cities or urban centers where Tariqa activities, centers, or communities are located."@en .
+
+snch:Country rdf:type rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "Represents countries or geopolitical entities where Tariqa activities, centers, or communities are located."@en .
+
+snch:Event rdf:type rdfs:Class ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "Represents events or occurrences that happen in time and space. (CIDOC-CRM: E5)"@en .
+
+snch:Actor rdf:type rdfs:Class ;
+    rdfs:label "Actor"@en ;
+    rdfs:comment "Represents agents or individuals involved in events. (CIDOC-CRM: E39)"@en ;
+    rdfs:subClassOf snch:Person .
+
+snch:Man_Made_Thing rdf:type rdfs:Class ;
+    rdfs:label "Man-Made Thing"@en ;
+    rdfs:comment "Represents physical objects created by humans. (CIDOC-CRM: E71)"@en .
+
+snch:Place rdf:type rdfs:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:comment "Represents geographic locations. (CIDOC-CRM: E53)"@en .
+
+snch:Activity rdf:type rdfs:Class ;
+    rdfs:label "Activity"@en ;
+    rdfs:comment "Represents activities or processes carried out by actors. (CIDOC-CRM: E7)"@en .
+
+snch:Period rdf:type rdfs:Class ;
+    rdfs:label "Period"@en ;
+    rdfs:comment "Represents a period of time in the ontology (CIDOC-CRM: E4)."@en .
+
+
+snch:located_in rdf:type rdf:Property ;
+    rdfs:label "located in"@en ;
+    rdfs:comment "Indicates the geographical location where an entity is situated."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range snch:Country ;
+    rdfs:subPropertyOf snch:has_location .
+
+snch:has_location rdf:type rdf:Property ;
+    rdfs:label "has location"@en ;
+    rdfs:comment "Specifies the location of a geographical entity."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range snch:City .
+
+snch:contains_building rdf:type rdf:Property ;
+    rdfs:label "contains building"@en ;
+    rdfs:comment "Specifies a building located within a geographical entity such as a city."@en ;
+    rdfs:domain snch:City ;
+    rdfs:range snch:Building .
+
+snch:located_at rdf:type rdf:Property ;
+    rdfs:label "located at"@en ;
+    rdfs:comment "Indicates the specific location where an artifact is situated, such as a building or city."@en ;
+    rdfs:domain snch:Artifact ;
+    rdfs:range owl:Thing .
+
+
+snch:founded_by rdf:type rdf:Property ;
+    rdfs:label "founded by"@en ;
+    rdfs:comment "Indicates the founder of a specific Tariqa. This property links a Tariqa to its founder, specifying the individual or spiritual leader who initiated the Tariqa."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Founder ;
+    owl:inverseOf snch:has_founded .
+
+snch:practices rdf:type rdf:Property ;
+    rdfs:label "practices"@en ;
+    rdfs:comment "Describes the spiritual practices associated with a particular Tariqa. This property links a Tariqa to its spiritual practices, detailing the rituals, prayers, and disciplines prescribed by the Tariqa for spiritual growth and development."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Spiritual_Practices .
+
+
+snch:has_hierarchy rdf:type rdf:Property ;
+    rdfs:label "has hierarchy"@en ;
+    rdfs:comment "Indicates the hierarchical structure within a Tariqa, linking ranks or levels of authority. This property establishes the organizational structure of the Tariqa, detailing the hierarchy among its members."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Hierarchy .
+
+snch:guided_by rdf:type rdf:Property ;
+    rdfs:label "guided by"@en ;
+    rdfs:comment "Links a person to their spiritual guide (Murshid) within the Tariqa. This property specifies the mentorship relationship between a follower and their spiritual guide, indicating the individual who provides guidance and instruction on the spiritual path."@en ;
+    rdfs:domain snch:Person ;
+    rdfs:range snch:Person .
+
+snch:teaches rdf:type rdf:Property ;
+    rdfs:label "teaches"@en ;
+    rdfs:comment "Specifies the teachings and doctrines of a Tariqa. This property links a Tariqa to its core beliefs, principles, and teachings, detailing the spiritual doctrines imparted to followers for guidance and enlightenment."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Doctrine .
+
+
+snch:belongs_to_lineage rdf:type rdf:Property ;
+    rdfs:label "belongs to lineage"@en ;
+    rdfs:comment "Indicates the spiritual lineage or chain of transmission associated with a Tariqa. This property links a Tariqa to its spiritual lineage, tracing the chain of transmission back to the founder and preserving the authenticity and authority of the Tariqa's teachings."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Lineage .
+
+snch:practices_dhikr rdf:type rdf:Property ;
+    rdfs:label "practices dhikr"@en ;
+    rdfs:comment "Specifies the practice of dhikr (remembrance of God) within a Tariqa. This property links a Tariqa to the practice of dhikr, indicating the spiritual discipline of invoking and remembering God through chanting, recitation, or meditation."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Dhikr .
+
+snch:undertakes_pilgrimage rdf:type rdf:Property ;
+    rdfs:label "undertakes pilgrimage"@en ;
+    rdfs:comment "Indicates the pilgrimage practices associated with a Tariqa. This property links a Tariqa to the pilgrimage journey to sacred sites, reflecting the spiritual significance and practices observed by followers during pilgrimages."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Pilgrimage .
+
+snch:engages_in_service rdf:type rdf:Property ;
+    rdfs:label "engages in service"@en ;
+    rdfs:comment "Links a Tariqa to its activities of community service and social welfare. This property specifies the engagement of the Tariqa in acts of service and compassion, reflecting its commitment to serving humanity and promoting social welfare."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Community_Service .
+
+snch:promotes_interfaith_relations rdf:type rdf:Property ;
+    rdfs:label "promotes interfaith relations"@en ;
+    rdfs:comment "Specifies the Tariqa's approach to interfaith relations and dialogue. This property indicates the promotion of dialogue, understanding, and cooperation between different religious traditions by the Tariqa, fostering interfaith harmony and mutual respect."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Interfaith_Relations .
+
+snch:addresses_contemporary_issues rdf:type rdf:Property ;
+    rdfs:label "addresses contemporary issues"@en ;
+    rdfs:comment "Indicates how a Tariqa addresses contemporary challenges and issues. This property specifies the Tariqa's response to modern-day issues and dilemmas, reflecting its relevance and adaptability to the changing needs of society."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Contemporary_Relevance .
+
+snch:produces_literature rdf:type rdf:Property ;
+    rdfs:label "produces literature"@en ;
+    rdfs:comment "Specifies the literature and writings produced by followers or leaders of a Tariqa. This property links a Tariqa to its literary output, including writings, poetry, and teachings generated by its followers and leaders."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Sufi_Literature .
+
+snch:celebrates_festivals rdf:type rdf:Property ;
+    rdfs:label "celebrates festivals"@en ;
+    rdfs:comment "Indicates the festivals and celebrations observed within a Tariqa. This property links a Tariqa to its festive occasions and celebrations, reflecting its cultural and spiritual traditions."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:Festivals .
+
+snch:has_affiliation rdf:type rdf:Property ;
+    rdfs:label "has affiliation"@en ;
+    rdfs:comment "Specifies the affiliation of individuals or communities with a specific Tariqa. This property links individuals or communities to the Tariqa with which they are affiliated, indicating their connection and allegiance to its teachings and practices."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range snch:Tariqa .
+
+snch:has_founded rdfs:subPropertyOf snch:has_affiliation .
+
+snch:acknowledges_spiritual_authority rdf:type rdf:Property ;
+    rdfs:label "acknowledges spiritual authority"@en ;
+    rdfs:comment "Indicates the recognition of spiritual authority within a Tariqa. This property links individuals or communities to the spiritual authority recognized within the Tariqa, indicating their allegiance and adherence to its leadership and guidance."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range snch:Actor .
+
+snch:has_role rdf:type rdf:Property ;
+    rdfs:label "has role"@en ;
+    rdfs:comment "Specifies the role or position held by individuals within the Tariqa. This property links individuals to their roles or positions within the Tariqa, indicating their responsibilities, functions, and authority."@en ;
+    rdfs:domain snch:Actor ;
+    rdfs:range owl:Thing .
+
+snch:depicts rdf:type rdf:Property ;
+    rdfs:label "depicts"@en ;
+    rdfs:comment "Specifies the artistic depiction of a concept, scene, or figure within the Tariqa. This property links artistic creations or expressions to the concepts, symbols, or figures associated with the Tariqa, providing visual representations of its teachings and traditions."@en ;
+    rdfs:domain snch:Artwork ;
+    rdfs:range owl:Thing .
+
+snch:exhibited_at rdf:type rdf:Property ;
+    rdfs:label "exhibited at"@en ;
+    rdfs:comment "Indicates the exhibition location of an artwork or artifact. This property links artworks or artifacts to the locations where they are displayed or exhibited, providing information about their public presentation."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range snch:Place .
+
+snch:took_place_at rdf:type rdf:Property ;
+    rdfs:label "took place at"@en ;
+    rdfs:comment "Specifies the location where an event took place. This property links events to the specific locations where they occurred, providing contextual information about the spatial dimension of the event."@en ;
+    rdfs:domain snch:Event ;
+    rdfs:range snch:Place .
+
+snch:has_time_span rdf:type rdf:Property ;
+    rdfs:label "has time span"@en ;
+    rdfs:comment "Specifies the temporal extent of an event. This property links events to their time spans, indicating the duration or period over which the event occurred."@en ;
+    rdfs:domain snch:Event ;
+    rdfs:range snch:Period .
+
+snch:participated_in rdf:type rdf:Property ;
+    rdfs:label "participated in"@en ;
+    rdfs:comment "Indicates the participation of an actor in an event. This property links actors to the events in which they participated, providing information about their involvement and roles within those events."@en ;
+    rdfs:domain snch:Actor ;
+    rdfs:range snch:Event .
+
+snch:has_note rdf:type rdf:Property ;
+    rdfs:label "has modifier"@en ;
+    rdfs:comment "Relates an activity to a modifier that describes additional information about the activity. (CIDOC-CRM: P3)"@en ;
+    rdfs:domain snch:Activity ;
+    rdfs:range owl:Thing .
+
+snch:influenced rdf:type rdf:Property ;
+    rdfs:label "influenced"@en ;
+    rdfs:comment "Relates one activity to another activity that was influenced by it."@en ;
+    rdfs:domain snch:Activity ;
+    rdfs:range snch:Activity .
+
+snch:took_office_from rdf:type rdf:Property ;
+    rdfs:label "took office from"@en ;
+    rdfs:comment "Indicates the date when the individual assumed office as the Caliph within the Tariqa."@en ;
+    rdfs:domain snch:Caliph ;
+    rdfs:range xsd:date .
+
+snch:took_office_until rdf:type rdf:Property ;
+    rdfs:label "took office until"@en ;
+    rdfs:comment "Indicates the date when the individual ceased to hold office as the Caliph within the Tariqa."@en ;
+    rdfs:domain snch:Caliph ;
+    rdfs:range xsd:date .
+
+snch:foundation_date rdf:type rdf:Property ;
+    rdfs:label "foundation date"@en ;
+    rdfs:comment "The date when Tariqa was founded."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range xsd:date .
+
+snch:city_located rdf:type rdf:Property ;
+    rdfs:label "city located"@en ;
+    rdfs:comment "Specifies the city where a Tariqa is located."@en ;
+    rdfs:domain snch:Tariqa ;
+    rdfs:range snch:City .
+
+snch:has_father rdf:type rdf:Property ;
+    rdfs:label "has father"@en ;
+    rdfs:comment "Specifies the father of an individual."@en ;
+    rdfs:domain snch:Person ;
+    rdfs:range snch:Father ;
+    owl:propertyDisjointWith snch:hasMother .
+
+    
+snch:has_mother rdf:type rdf:Property ;
+    rdfs:label "has mother"@en ;
+    rdfs:comment "Specifies the mother of an individual."@en ;
+    rdfs:domain snch:Person ;
+    rdfs:range snch:Mother ;
+    owl:propertyDisjointWith snch:has_father .
+    
+snch:birth_place rdf:type rdf:Property ;
+    rdfs:label "birth place"@en ;
+    rdfs:comment "Specifies the place where an individual was born."@en ;
+    rdfs:domain snch:Person ;
+    rdfs:range snch:BirthPlace .
+  
+snch:has_mother rdf:type rdf:Property ;
+    rdfs:label "has mother"@en ;
+    rdfs:comment "Specifies the mother of an individual."@en ;
+    rdfs:subPropertyOf snch:has_parent ;
+    owl:propertyDisjointWith snch:has_father .
+
+snch:has_parent rdf:type rdf:Property ;
+    rdfs:label "has parent"@en ;
+    rdfs:comment "Specifies the parent of an individual."@en ;
+    rdfs:domain snch:Person ;
+    rdfs:range snch:Person .
