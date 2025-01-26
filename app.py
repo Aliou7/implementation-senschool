@@ -8,7 +8,7 @@ GRAPHDB_ENDPOINT = "http://localhost:7200/repositories/snch_ontology"
 
 @app.get("/")
 def read_root():
-    return {"message": "Bienvenue dans l'API REST GraphDB"}
+    return {"message": "Welcome to the GraphDB REST API"}
 
 @app.get("/caliphs")
 def get_caliphs():

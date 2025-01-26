@@ -149,6 +149,14 @@ snch:Activity rdf:type rdfs:Class ;
 snch:Period rdf:type rdfs:Class ;
     rdfs:label "Period"@en ;
     rdfs:comment "Represents a period of time in the ontology (CIDOC-CRM: E4)."@en .
+    
+    ### Classe BirthDate ###
+    
+snch:BirthDate rdf:type rdfs:Class ;
+    rdfs:label "Birth Date"@en ;
+    rdfs:comment "Represents the birth date of an individual."@en ;
+    rdfs:subClassOf owl:Thing .
+
 
 
 snch:located_in rdf:type rdf:Property ;
@@ -331,6 +339,13 @@ snch:took_office_until rdf:type rdf:Property ;
     rdfs:comment "Indicates the date when the individual ceased to hold office as the Caliph within the Tariqa."@en ;
     rdfs:domain snch:Caliph ;
     rdfs:range xsd:date .
+    
+snch:has_birthDate rdf:type rdf:Property ;
+    rdfs:label "has birth date"@en ;
+    rdfs:comment "Specifies the birth date of an individual."@en ;
+    rdfs:domain snch:Person ;
+    rdfs:range xsd:date .
+
 
 snch:foundation_date rdf:type rdf:Property ;
     rdfs:label "foundation date"@en ;
